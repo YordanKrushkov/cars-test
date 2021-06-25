@@ -1,0 +1,46 @@
+
+@import "../../design/variables.scss";
+#loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        font-style: italic;
+        font-size: 24px;
+        width: 190px;
+        margin-left: 80px;
+        margin-top:0;
+        text-align: center;
+    }
+}
+.ring {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+position: absolute;
+left: 0;
+right: 0;
+top: 80px;
+margin: auto;
+
+
+}
+.ring:after {
+  content: " ";
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid rgb(250, 250, 250);
+  border-color: $mainColor transparent $mainColor transparent;
+  animation: ring 1.2s linear infinite;
+}
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

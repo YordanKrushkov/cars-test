@@ -1,0 +1,7 @@
+$mainColor: #5f6367;
+
+@mixin MQ($arg) {
+    @media screen and (min-width: $arg) {
+        @content;
+    }
+}

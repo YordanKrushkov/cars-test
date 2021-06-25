@@ -1,0 +1,116 @@
+@import '../../design/variables.scss';
+
+.vehicleWrapper {
+    display: flex;
+    height: 120px;
+    border-bottom: 1px solid $mainColor;
+    position: relative;
+
+    @include MQ(768px){
+        box-sizing: border-box;
+        width: 50%;
+        height:max-content;
+        // border: 1px solid $mainColor;
+        flex-direction: column;
+        border-bottom: none;
+
+        &:nth-child(even){
+            border-left: 1px solid $mainColor;
+        }
+    }
+    @include MQ(1025px){
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 600px;
+        height: 90vh;
+        flex-direction: column;
+        border-bottom: 1px solid $mainColor;
+        border-left: 1px solid $mainColor;
+        &:first-child{
+            border-left: 0px;
+        }
+        // &:nth-child(even){
+        //     border-left: 1px solid $mainColor;
+        // }
+    }
+    .imageWrapper {
+        margin-right: 10px;
+        @include MQ(768px){
+            margin: 0;
+        }
+        img {
+            width: 120px;
+            height: 120px;
+            @include MQ(768px){
+                width: 100%;
+                height: 100%;
+                max-height: 380px;
+                object-fit: cover;
+            }
+            @include MQ(920px){
+                width: 100%;
+                height: 100%;
+                max-height: 400px;
+                object-fit: cover;
+            }
+        }
+    }
+    .infoWrapper{
+        @include MQ(768px){
+          min-height: 190px;
+          text-align: center;
+          }
+        @include MQ(920px){
+          margin-top: 30px;
+          text-align: center;
+          }
+    }
+
+    h1 {
+        text-transform: uppercase;
+        margin: 0;
+        font-weight: 500;
+        @include MQ(768px){
+          border-bottom: 1px solid black;
+          border-top: 1px solid black;
+          width: 30%;
+          text-align: center;
+          margin: 10px auto;
+        }
+    }
+    h4,
+    p {
+        color: $mainColor;
+        margin: 5px 0;
+        @include MQ(920px){
+            margin-top: 30px;
+             }
+    }
+
+    h4{
+        @include MQ(768px){
+            font-size: 20px;
+             }
+        @include MQ(920px){
+            font-size: 24px;
+             }
+    }
+    p {
+        font-size: 12px;
+        @include MQ(768px){
+           font-size: 14px;
+            }
+        @include MQ(920px){
+           font-size: 18px;
+            }
+            
+    }
+
+    a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        text-decoration: none;
+        color: $mainColor;
+    }
+}
